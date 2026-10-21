@@ -8,7 +8,7 @@ services:
 
     networks:
       - mynetwork
-  auth:
+  auth_service:
     image: rudrappam/pyapp:auth_image
     deploy:
       replicas: 1
@@ -20,7 +20,7 @@ services:
     depends_on:
       - db
 
-  book:
+  book_service:
     image: rudrappam/pyapp:book_image
     deploy:
       replicas: 1
@@ -31,7 +31,7 @@ services:
 
     depends_on:
       - db
-  borrow:
+  borrow_service:
     image: rudrappam/pyapp:borrow_image
     deploy:
       replicas: 1
